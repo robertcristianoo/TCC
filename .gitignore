@@ -110,7 +110,7 @@ venv.bak/
 .gz
 
 # database csv
-.csv
+*.csv
 
 # ref teorico
 ref teórico/
