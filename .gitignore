@@ -102,3 +102,15 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# rar, zip, gz files
+!TEMPLATE_LaTeX_IFNMG.zip
+.zip
+.rar
+.gz
+
+# database csv
+.csv
+
+# ref teorico
+ref teórico/*	
