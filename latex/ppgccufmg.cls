@@ -365,7 +365,7 @@
   \def\ppgcc@mscdocprop{Proposta de disserta\c{c}\~{a}o}
   \def\ppgcc@tccdoc{Monografia}
   \def\ppgcc@tccdocproj{Projeto de Monografia}
-  \def\ppgcc@advisor{Orientador}
+  \def\ppgcc@advisor{Orientadora}
   \def\ppgcc@docdescription{%
     \@documenttype{} apresentad\ppgcc@doctype@gender{} ao Curso de
     Gradua\c{c}\~{a}o em \@deflang@course{} do \@deflang@university{} -- Campus \@campus, como requisito

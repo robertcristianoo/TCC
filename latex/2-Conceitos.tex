@@ -1,9 +1,9 @@
 \chapter{Conceitos Básicos}
 
 \section{Grafos}
-Muitas situações no mundo real podem ser descritas com o uso de um diagrama, composto este por conjunto de pontos e arestas, onde as arestas unem pares desses pontos. Por exemplo, os pontos podem representar cidades em um mapa, e as arestas representariam as estradas que ligam duas cidades. O conceito de grafo parte de uma abstração matemática para caracterizar situações com essas características (\cite{Bondy1976}).
+Muitas situações no mundo real podem ser descritas com o uso de um diagrama, composto por um conjunto de pontos e arestas, onde as arestas unem pares desses pontos. Por exemplo, os pontos podem representar cidades em um mapa, e as arestas representariam as estradas que ligam duas cidades. O conceito de grafo parte de uma abstração matemática para caracterizar situações com essas características \citep{Bondy1976}.
 
-Um grafo $G$ é uma tripla ($V$, $E$, $\psi$), consistido por um conjunto não vazio de vértices $V$, um conjunto de arestas $E$ e uma função de incidência $\psi$ que caracteriza quais vértices possuem uma relação (através de uma aresta) com outros vértices. Por exemplo, seja $G = (V, E, \psi)$ um grafo (figura \ref{fig:graphExample1}), tal que $V = \{0, 1, 2, 3, 4, 5\}$, $E = \{a, b, c, d, e, f, g, i\}$ e $\psi$ a função incidência representada na tabela \ref{tab:graphExample1}.
+Matematicamente um grafo $G$ é uma tripla ($V$, $E$, $\psi$), consistido por um conjunto não vazio de vértices $V$, um conjunto de arestas $E$ e uma função de incidência $\psi$ que caracteriza quais vértices possuem uma relação (através de uma aresta) com outros vértices. Por exemplo, seja $G = (V, E, \psi)$ um grafo (Figura \ref{fig:graphExample1}), tal que $V = \{0, 1, 2, 3, 4, 5\}$, $E = \{a, b, c, d, e, f, g, i\}$ e $\psi$ a função incidência representada na Tabela \ref{tab:graphExample1}.
 
 \begin{table}[ht!]
 \caption{Função incidência $\psi$ de $G$}
@@ -27,7 +27,7 @@ Um grafo $G$ é uma tripla ($V$, $E$, $\psi$), consistido por um conjunto não v
 }
 \end{table}
 
-Segundo \cite{Bondy1976}, grafos possuem este nome porque eles possuem uma representação gráfica, e são essas representações que facilitam o entendimento de suas propriedades.
+Segundo \cite{Bondy1976}, os grafos possuem esse nome porque eles possuem uma representação gráfica, e são essas representações que facilitam o entendimento de suas propriedades.
 
 \begin{figure}[ht!]
 \caption{Diagrama do Grafo $G$}
@@ -35,17 +35,36 @@ Segundo \cite{Bondy1976}, grafos possuem este nome porque eles possuem uma repre
 \centering
 \includegraphics[scale=0.75]{img/graphExample1.png}
 {\fontsize{11pt}{\baselineskip}\selectfont
-\\Fonte: Graph Online\footnotemark
+\\Fonte: \cite{graphOnline}.
 }
 \end{figure}
-\footnotetext{Disponível em: \url{https://graphonline.ru/en/}}
 
-\section{Redes Neurais Artificiais} %aqui falarei sobre redes neurais, somente introduzi grafos para pode explicar por completo ela
-O ser humano possui capacidades cognitivas extraordinárias e, desde o surgimento da computação, desejou-se projetar máquinas capazes de realizar tarefas inteligentes que, até então, somente eram  executadas por humanos. O primeiro trabalho desenvolvido nessa área foi apresentado por (\cite{mcculloch1943logical}) que, por sua vez, também foi utilizado como base para a concepção do \textit{Perceptron} (\cite{rosenblatt1958perceptron}) e um modelo semelhante, o \textit{Adaline} (\cite{widrow1960adaptive}). Tais trabalhos deram origem ao conceito de Redes Neurais Artificiais (RNA) que, em outras palavras, é uma tentativa de copiar a estrutura e o funcionamento do cérebro, composto este por bilhões de neurônios, para uma estrutura artificial, transformando assim as redes neurais biológicas em redes neurais artificiais (\cite{Rauber2005}).
+\section{Classificação de dados}
+Classificação de dados é um problema que abrange enumeras aplicações em diversos tipos de cenários no nosso dia a dia, tais como diagnóstico de doenças, identificação de objetos em fotos e vídeos, categorização de seres vivos e espécies, dentre outros. Esse problema é um dos tópicos mais ativos na área de aprendizado de máquina. Isso se dá, porque classificar dados consiste em determinar um rótulo ou classe para um objeto, baseado em um conjunto de características extraídas do mesmo \citep{duda1973pattern,bishop2006pattern}. 
 
-Para compreender o conceito por trás de uma rede neural, é preciso introduzir um modelo simplificado de um neurônio e suas capacidades de processamento associadas. Cada neurônio é considerado como uma unidade básica de processamento que, quando estimulada por sinais de entrada, emitem sinais de saída como uma reação. Tais sinais emitidos por um neurônio, são repassados para outros neurônios através de uma conexão sináptica. Tal processo pode ser repetido por várias camadas de neurônios até chegar ao nosso cérebro, que então processa essa informação e produz novas reações. (\cite{baeza1999modern}). A principal função de uma rede neural é armazenar conhecimento experimental e torná-lo disponível, o que em prática significa que este conhecimento é adquirido e armazenado em pesos sinápticos durante o processo.
+Em geral, dados são classificados como pertencentes a uma única classe ou categoria. Essa forma de classificação é denominada classificação de rótulo único. Por outro lado, se houver mais uma forma de rotular a mesma entrada, então dá-se o nome de classificação de multi-rótulo. 
 
-Uma RNA é normalmente implementada através de um programa de computador (\textit{software}) ou através de componentes eletrônicos (\textit{hardware}). Uma rede neural pode ser representada matematicamente através de uma estrutura de grafo (figura \ref{fig:graphNeuron}), onde os vértices fazem o papel dos neurônios e as arestas representam as conexões sinápticas entre os neurônios, onde se adicionarmos pesos a tais arestas, é possível mensurar a "força" de tal conexão sináptica. Seja $x_i$ entradas fornecidas por outros neurônios para um neurônio artificial. O processamento desse neurônio consiste em uma combinação linear das $D$ entradas tais que $\sum_{i=1}^{D} = w_i x_i$, onde $x_i$ é uma aresta com peso $w_i$. Se tal valor ultrapassar um limiar $\mu$, esse neurônio dispara um valor positivo (1) na saída binária $y$, caso contrário dispara um valor negativo (0) na saída. 
+Formalmente o processo de classificação consiste em $X = \{X_1,...,X_i\}$ um conjunto de $i$ entradas, $C = \{c_1,...,c_n\}$ um conjunto de $n$ classes, tal que $n \geq 2$, e $Y = \{(X_1, \{c_1,...,c_j\}),...,(X_i, \{c_n,...,c_k\})\}$ um conjunto de treinamento, no qual cada entrada $X_i$ é categorizada por uma ou mais classes $c_i$. O objetivo geral de um classificador é aprender, através de seu conjunto de treinamento $Y$, uma possível correlação entre os atributos das entradas com suas classes, de tal forma que para uma entrada $X' = \{X'_1,...,X'_i\}$ que não possua rótulo $c$ qualquer, seja possível classificar-lá.
+
+Para ilustrar o processo de classificação de dados, considere o problema da flor de Iris. Nesse problema, existe um conjunto de flores do gênero Iris que podem ser rotuladas de uma das três maneiras: do tipo setosa, virgínica ou versicolor. Partindo desse ponto, o objetivo é determinar a qual grupo uma determinada flor pertence baseado nas medidas de sépalas e pétalas da mesma. A Figura \ref{fig:irisExample} ilustra o processo de classificação. Inicialmente as informações especificas sobre as sépalas e pétalas devem ser extraídas em um pré-processamento. Em seguida tais medidas são processadas e suas características extraídas. Por fim, é realizada a classificação das flores. Neste exemplo os valores de $X$ serão as medidas de comprimento, largura das sépalas e pétalas e $C$ assumirá os rótulos setosa, virgínica e versicolor.
+
+\begin{figure}[ht!]
+\caption{Processo de classificação de flores do gênero Iris}
+\label{fig:irisExample}
+\centering
+\includegraphics[scale=0.5]{img/irisExample.png}
+{\fontsize{11pt}{\baselineskip}\selectfont
+\\Fonte: \cite[18]{pacheco2016agregaccao}
+}
+\end{figure}
+
+
+\subsection{Redes Neurais Artificiais} %aqui falarei sobre redes neurais, somente introduzi grafos para pode explicar por completo ela
+O ser humano possui capacidades cognitivas extraordinárias e, desde o surgimento da computação, desejou-se projetar máquinas capazes de realizar tarefas inteligentes que, até então, somente eram  executadas por humanos. Os primeiros trabalhos desenvolvidos nessa área foram: um neurônio apresentado por \cite{mcculloch1943logical}, usado posteriormente como base para a concepção do  \textit{Perceptron} por \cite{rosenblatt1958perceptron} e um neurônio chamado \textit{Adaline} por \cite{widrow1960adaptive}. Tais trabalhos deram origem ao conceito de Redes Neurais Artificiais (RNA) que, em outras palavras, é uma tentativa de copiar a estrutura e o funcionamento do cérebro, composto este por bilhões de neurônios, para uma estrutura artificial, transformando assim as redes neurais biológicas em redes neurais artificiais \citep{Rauber2005}.
+
+Para compreender o conceito por trás de uma rede neural, é preciso introduzir um modelo simplificado de um neurônio e suas capacidades de processamento associadas. Cada neurônio é considerado como uma unidade básica de processamento que, quando estimulada por sinais de entrada, emitem sinais de saída como uma reação. Tais sinais emitidos por um neurônio, são repassados para outros neurônios através de uma conexão sináptica. Tal processo pode ser repetido por várias camadas de neurônios até chegar ao nosso cérebro, que então processa essa informação e produz novas reações \citep{baeza1999modern}. A principal função de uma rede neural é armazenar conhecimento experimental e torná-lo disponível, o que em prática significa que este conhecimento é adquirido e armazenado em pesos sinápticos durante o processo. Uma RNA é normalmente implementada através de um programa de computador (\textit{software}) ou através de componentes eletrônicos (\textit{hardware}).
+
+ Uma rede neural pode ser representada matematicamente através de uma estrutura de grafo (Figura \ref{fig:graphNeuron}), em que os vértices fazem o papel dos neurônios e as arestas representam as conexões sinápticas entre os neurônios, no qual se adicionarmos pesos a tais arestas, é possível mensurar a força de tal conexão sináptica. Seja $x_i$ entradas fornecidas por outros neurônios para um neurônio artificial. O processamento desse neurônio consiste em uma combinação linear das $D$ entradas tais que $\sum_{i=1}^{D} = w_i x_i$, onde $x_i$ é uma aresta com peso $w_i$. Se tal valor ultrapassar um limiar $\mu$, esse neurônio dispara um valor positivo (1) na saída binária $y$, caso contrário dispara um valor negativo (0) na saída. 
 
 \begin{figure}[ht!]
 \caption{Diagrama de um neurônio artificial}
@@ -53,6 +72,6 @@ Uma RNA é normalmente implementada através de um programa de computador (\text
 \centering
 \includegraphics[scale=0.5]{img/graphNeuron.png}
 {\fontsize{11pt}{\baselineskip}\selectfont
-\\Fonte: RAUBER, 2005. p 6.
+\\Fonte: \cite[6]{Rauber2005}
 }
 \end{figure}
