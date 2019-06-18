@@ -11,7 +11,8 @@
 \contentsline {section}{\numberline {2.2}Classifica\IeC {\c c}\IeC {\~a}o de dados}{4}{section.2.2}% 
 \contentsline {subsection}{\numberline {2.2.1}Redes neurais artificiais}{5}{subsection.2.2.1}% 
 \contentsline {subsection}{\numberline {2.2.2}K-vizinhos mais pr\IeC {\'o}ximos}{7}{subsection.2.2.2}% 
-\contentsline {subsection}{\numberline {2.2.3}Processamento de linguagem natural}{7}{subsection.2.2.3}% 
+\contentsline {section}{\numberline {2.3}Processamento de linguagem natural}{8}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Classifica\IeC {\c c}\IeC {\~a}o de texto}{8}{subsection.2.3.1}% 
 \contentsline {chapter}{\chapternumberline {3}Referencial Te\IeC {\'o}rico}{9}{chapter.3}% 
 \contentsline {chapter}{\chapternumberline {4}Metodologia}{11}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Cronograma}{11}{section.4.1}% 

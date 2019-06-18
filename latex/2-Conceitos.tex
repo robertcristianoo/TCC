@@ -49,7 +49,7 @@ Formalmente o processo de classificação consiste em $X = \{X_1,...,X_i\}$ um c
 
 Para ilustrar o processo de classificação de dados, considere o problema da flor de Iris. Nesse problema, existe um conjunto de flores do gênero Iris que podem ser rotuladas de uma das três maneiras: do tipo setosa, virgínica ou versicolor. Partindo desse ponto, o objetivo é determinar a qual grupo uma determinada flor pertence baseado nas medidas de sépalas e pétalas da mesma. A Figura \ref{fig:irisExample} ilustra o processo de classificação. Inicialmente as informações especificas sobre as sépalas e pétalas devem ser extraídas em um pré-processamento. Em seguida tais medidas são processadas e suas características extraídas. Por fim, é realizada a classificação das flores. Neste exemplo os valores de $X$ serão as medidas de comprimento, largura das sépalas e pétalas e $C$ assumirá os rótulos setosa, virgínica e versicolor.
 
-Em geral, existem diversos algoritmos para classificação de dados, onde cada um possui sua especificidade, vantagens e desvantagens. Neste trabalho, abordaremos sobre duas tecnologias para classificação de dados, sendo elas RNA e KNN.
+Em geral, existem diversos algoritmos para classificação de dados, onde cada um possui sua especificidade, vantagens e desvantagens. Neste trabalho, aborda-se o uso de duas técnicas para classificação de dados, sendo elas RNA e KNN.
 
 \begin{figure}[ht!]
 \caption{Processo de classificação de flores do gênero Iris}
@@ -95,4 +95,14 @@ Na Figura \ref{fig:knnExample}, é ilustrado o processo de classificação com o
 }
 \end{figure}
 
-\subsection{Processamento de linguagem natural}
+\section{Processamento de linguagem natural}
+O processamento de linguagem natural (PLN) têm como objetivo tratar os mais diversos aspectos presentes dentro da comunicação humana, tais como sons, palavras, sentenças e discursos, levando em consideração os seus formatos, referências, estruturas, significados, contextos e aplicações. Embora exista outros animais que possuem um vocabulário com centenas de sinais, tais como elefantes e golfinhos, somente os seres humanos possuem a capacidade de se comunicar, de forma confiável, em um número ilimitado de mensagens qualitativamente diferentes, sobre um tema qualquer \citep{russell1994inteligencia, gonzalez2003recuperaccao}.
+
+Hoje em dia, com o constante crescimento da rede mundial de computadores, possibilitou o acesso a enumeras páginas de informações na \textit{Web}, no qual quase todas elas estão em um formato de linguagem natural. Entretanto, disponibilidade não significa fácil acesso à informação. Para uma máquina adquirir tal conhecimento, ela precisa ser treinada, de forma exaustiva, para compreender as complexas, e muitas vezes ambíguas, linguagens em que os seres humanos se comunicam.
+
+Segundo \cite{russell1994inteligencia} as linguagens naturais, tais como o português e o espanhol, não podem ser caracterizadas como um conjunto de sentenças definitivas, pois de acordo com o contexto em que for definida uma sentença de alguma dessas linguagens, ela pode possuir inúmeras interpretações diferentes. Portanto, convém definir um modelo de linguagem natural como uma distribuição de probabilidade sobre sentenças.
+
+O PLN consiste no emprego de um conjunto de técnicas computacionais para aprender, entender e reproduzir uma linguagem natural. No processo de tradução do significado, tratamento de ambiguidade e entre outros desafios, o PLN pode utilizar de conhecimentos linguísticos e métodos estatísticos para resolver-los. Para compreender o processo de aplicação de conhecimentos linguísticos, é apresentado uma seção sobre classificação de texto a seguir.
+
+\subsection{Classificação de texto}
+Classificação ou categorização de texto é a tarefa de, dado algum tipo de texto, decidir a qual conjunto predefinido de classes o mesmo pertence. Por exemplo, decidir a qual linguagem pertence uma sentença ou identificar se um texto de uma chamada de emergência é falsa ou não, são exemplos de classificação de texto.
