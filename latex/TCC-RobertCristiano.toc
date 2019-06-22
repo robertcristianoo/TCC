@@ -12,8 +12,8 @@
 \contentsline {subsection}{\numberline {2.2.1}Redes neurais artificiais}{5}{subsection.2.2.1}% 
 \contentsline {subsection}{\numberline {2.2.2}K-vizinhos mais pr\IeC {\'o}ximos}{7}{subsection.2.2.2}% 
 \contentsline {section}{\numberline {2.3}Processamento de linguagem natural}{8}{section.2.3}% 
-\contentsline {subsection}{\numberline {2.3.1}Classifica\IeC {\c c}\IeC {\~a}o de texto}{8}{subsection.2.3.1}% 
-\contentsline {chapter}{\chapternumberline {3}Referencial Te\IeC {\'o}rico}{9}{chapter.3}% 
-\contentsline {chapter}{\chapternumberline {4}Metodologia}{11}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Cronograma}{11}{section.4.1}% 
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{13}{chapter*.4}% 
+\contentsline {subsection}{\numberline {2.3.1}Classifica\IeC {\c c}\IeC {\~a}o de texto}{9}{subsection.2.3.1}% 
+\contentsline {chapter}{\chapternumberline {3}Referencial Te\IeC {\'o}rico}{11}{chapter.3}% 
+\contentsline {chapter}{\chapternumberline {4}Metodologia}{13}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Cronograma}{13}{section.4.1}% 
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{15}{chapter*.4}% 
