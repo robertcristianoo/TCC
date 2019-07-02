@@ -43,15 +43,20 @@
   course={Ciência da Computação},
   address={Montes Claros},
   date={2019-04},
-  keywords={Inteligência Artificial, Classificação de texto, Redes Neurais, Processamento de Linguagem Natural},
+  keywords={Inteligência Artificial, Chamadas emergenciais, Classificação de texto, Redes Neurais, Processamento de Linguagem Natural},
   advisor={Luciana Balieiro Cosme},
 %  approval={img/approvalsheet.eps},
   abstract={Resumo}{0-Resumo},
   abstract=[english]{Abstract}{0-Abstract},
   %dedication={dedicatoria},
   %ack={agradecimentos},
-  epigraphtext={Se não fosse difícil, todo mundo faria isso. É a dificuldade que torna isso grandioso}{Tom Hanks},
+  epigraphtext={If it wasn't hard, everyone would do it. It's the hard that makes it great}{Tom Hanks},
 }
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 % Inclua cada capítulo em um arquivo separado para melhorar a organização
 \input{1-Introducao}

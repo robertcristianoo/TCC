@@ -1107,7 +1107,7 @@
   % Sumário e lista de figuras e de tabelas
   \tableofcontents
   \listoffigures
-  %\listoftables
+  \listoftables
 
   % ATENÇÃO:
   % -------
