@@ -86,7 +86,7 @@ instâncias. Esse algoritmo encontra os $k$ objetos mais similares e realiza uma
 Na Figura \ref{fig:knnExample}, é ilustrado o processo de classificação com o algoritmo KNN. Neste exemplo, têm-se três classes, anteriormente conhecidas, sendo elas: classe A (círculo vermelho), classe B (triangulo azul) e classe C (quadrado verde). O objetivo é identificar, por similaridade, a qual classe pertence a amostra (estrela cinza), olhando para o seus $k$ vizinhos mais próximos. Para $k = 1$, esse algoritmo classificaria a amostra como pertencente a classe C. Por outro lado, se o valor escolhido para $k$ é $5$, por votação majoritária, a amostra seria classificada como pertencente a classe B.
 
 \begin{figure}[ht!]
-\caption{Exemplo do K-vizinhos mais próximos em um plano cartesiano}
+\caption{Ilustração do algoritmo K-vizinhos mais próximos aplicado em um plano cartesiano}
 \label{fig:knnExample}
 \centering
 \includegraphics[scale=0.5]{img/knnExample.png}
@@ -94,6 +94,8 @@ Na Figura \ref{fig:knnExample}, é ilustrado o processo de classificação com o
 \\Fonte: Elaborado pelo autor
 }
 \end{figure}
+
+Um grande fator que pode definir a eficácia do algoritmo KNN no contexto em que é aplicado, é o valor de escolha para o $k$. Por ser um valor variável (não constante), deve ser determinado de forma empírica, variando de acordo com a base de dados. Caso o valor escolhido para $k$ seja muito baixo, a classificação ficará sujeita a \textit{outliers}, ou seja, dados atípicos ou ruídos, que não condizem com o contexto da classificação. Já por outro lado, se $k$ assumir um valor alto, a vizinhança poderá incluir elementos pertencentes a outras classes, não necessariamente relevantes ao objeto de análise, interferindo assim, no resultado final da rotulação \citep{fukunaga1975knn}. Por ser um fator relevante, deverá ser avaliado cuidadosamente.
 
 \section{Processamento de linguagem natural}
 O processamento de linguagem natural (PLN) têm como objetivo tratar os mais diversos aspectos presentes dentro da comunicação humana, tais como sons, palavras, sentenças e discursos, levando em consideração os seus formatos, referências, estruturas, significados, contextos e aplicações. Embora exista outros animais que possuem um vocabulário com centenas de sinais, tais como os elefantes e os golfinhos, somente os seres humanos possuem a capacidade de se comunicar, de forma confiável, em um número ilimitado de mensagens qualitativamente diferentes, sobre um tema qualquer \citep{russell1994inteligencia, gonzalez2003recuperaccao}.
