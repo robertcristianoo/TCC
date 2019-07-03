@@ -1,3 +1,32 @@
 \chapter{Metodologia}
 
+\section{Base de dados}
+A base de dados a ser trabalhada neste projeto é a \textit{Call Data}, do centro de comunicações do departamento de polícia de Seattle (\textit{Seattle Police Department Communications Center} - SPD), dos Estados Unidos da América. Esta base de dados representa os relatórios das chamadas emergenciais originados pela comunidade local, onde é armazenado cerca de $95\%$ de todos os chamados recebidos pelo departamento. No total, estão disponíveis 11 colunas de informações que descrevem a ocorrência (Tabela \ref{tab:callDataColumns}). Existindo mais de 3,9 milhões ocorrências únicas registradas desde 6 de fevereiro de 2009. Novos dados são inseridos diariamente pela equipe administradora, o que é um ponto positivo, pois é possível estimar o número de chamadas falsas recebidas em relação ao número total de chamados nos últimos anos, como também validar os objetivos ressaltados neste trabalho no cenário atual.
+
+\begin{table}[ht!]
+\caption{Tabela de atributos que descrevem uma ocorrência.}
+\label{tab:callDataColumns}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llc@{}}
+\toprule
+\multicolumn{1}{c}{\textbf{Atributo}} & \multicolumn{1}{c}{\textbf{Descrição}}                           & \textbf{Formato} \\ \midrule
+ID                                    & Identificador único                                              & Texto         \\ \midrule
+Registro                              & Como foi resolvido o chamado                                     & Texto         \\ \midrule
+Chamada                       & Origem da chamada (telefone, 911, alarme)                                               & Texto         \\ \midrule
+Prioridade                            & Prioridade assimilada ao chamado                                 & Texto         \\ \midrule
+Classificação inicial                 & Como foi classificado inicialmente a ocorrência                  & Texto         \\ \midrule
+Classificação final                   & Como foi classificada pós o acompanhamento                         & Texto         \\ \midrule
+Data e hora                           & Data e hora em que foi recebida o chamado                        & Data e hora   \\ \midrule
+Tempo de chegada                      & Tempo de chegada do primeiro policial ao local do registro & Texto         \\ \midrule
+Ponto cardeal                         & Ponto cardeal em relação ao mapa geográfico da cidade            & Texto         \\ \midrule
+Setor                                 & Setor do ponto cardeal da ocorrência                             & Texto         \\ \midrule
+Quadra                                & Quadra do setor da ocorrência                                    & Texto         \\ \bottomrule
+\end{tabular}%
+}
+\end{table}
+
+Por se tratar de uma base de dados pública e disponível na internet, as informações disponíveis são restritas em relação aos dados originais que são coletados diariamente pelo departamento, pois devido a sua natureza, são informações sigilosas e privadas da comunidade local. Dados como: nome, idade, sexo ou logradouro da ocorrência, foram removidos pelos administradores com o objetivo de preservar a privacidade dos envolvidos. 
+
+Outra característica dessa base de dados é que ela está disponível no idioma inglês e com informações e relatórios dos chamados já bem resumidos, o que não possibilita tanta exploração e uso de algoritmos de processamento de linguagem natural. Contudo, como toda base de dados, um pré-processamento é necessário, com objetivo de eliminar ou corrigir erros de ortografia ou informações inconsistentes.
 \section{Cronograma}
