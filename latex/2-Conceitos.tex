@@ -1,5 +1,5 @@
-\chapter{Conceitos Básicos} %consertar organização do texto
-Nesta seção, será explorado alguns fundamentos básicos para compreender, passo a passo, como será conduzida a metodologia proposta. Primeiramente introduz-se o problema da classificação de dados. Logo após esse conceito, descreve-se brevemente sobre uma abstração matemática muito utilizada na computação, o Grafo, que têm como serventia facilitar a visualização de como é composta a estrutura de um neurônio artificial, apresentada esta junto ao K-vizinhos mais próximos, como exemplos de técnicas de categorização de dados. Por fim, é apresentado uma introdução ao Processamento de Linguagem Natural (PLN), dando enfase um sub-conceito muito valioso para os objetivos deste trabalho, que é classificação de texto.
+\chapter{Conceitos Básicos}
+Nesta seção, será explorado alguns fundamentos básicos para compreender, passo a passo, como será conduzida a metodologia proposta. Primeiramente introduz-se o problema da classificação de dados. Logo após esse conceito, descreve-se como exemplos de técnicas de categorização de dados, as Redes Neurais Artificiais (RNA) e o K-vizinhos mais próximos. Por fim, é apresentado uma introdução ao Processamento de Linguagem Natural (PLN), dando enfase a um sub-conceito muito valioso para os objetivos deste trabalho, que é a classificação de texto.
 
 \section{Classificação de dados}
 Classificação de dados é um problema que abrange enumeras aplicações em diversos tipos de cenários no nosso dia a dia, tais como diagnóstico de doenças, identificação de objetos em fotos e vídeos, categorização de seres vivos e espécies, dentre outros. Esse problema é um dos tópicos mais ativos na área de aprendizado de máquina. Isso se dá, porque classificar dados consiste em determinar um rótulo ou classe para um objeto, baseado em um conjunto de características extraídas do mesmo \citep{duda1973pattern,bishop2006pattern}. 
@@ -16,54 +16,18 @@ Em geral, existem diversos algoritmos para classificação de dados, onde cada u
 \caption{Processo de classificação de flores do gênero Iris}
 \label{fig:irisExample}
 \centering
-\includegraphics[scale=0.5]{img/irisExample.png}
+\includegraphics[scale=0.65]{img/irisExample.png}
 {\fontsize{11pt}{\baselineskip}\selectfont
 \\Fonte: \cite{pacheco2016agregaccao}
 }
 \end{figure}
 
-\subsection{Grafos}
-Muitas situações no mundo real podem ser descritas com o uso de um diagrama, composto por um conjunto de pontos e arestas, onde as arestas unem pares desses pontos. Por exemplo, os pontos podem representar cidades em um mapa, e as arestas representariam as estradas que ligam duas cidades. O conceito de grafo parte de uma abstração matemática para caracterizar situações com essas características \citep{Bondy1976}.
-
-Matematicamente um grafo $G$ é uma tripla ($V$, $E$, $\psi$), consistido por um conjunto não vazio de vértices $V$, um conjunto de arestas $E$ e uma função de incidência $\psi$ que caracteriza quais vértices possuem uma relação (através de uma aresta) com outros vértices. Por exemplo, seja $G = (V, E, \psi)$ um grafo (Figura \ref{fig:graphExample1}), tal que $V = \{0, 1, 2, 3, 4, 5\}$, $E = \{a, b, c, d, e, f, g, i\}$ e $\psi$ a função incidência representada na Tabela \ref{tab:graphExample1}.
-
-\begin{table}[ht!]
-\caption{Função incidência $\psi$ de $G$}
-\label{tab:graphExample1}
-\centering
-\begin{tabular}{| c | c |}
-\hline
-    $\psi_a = 1,2$\\ 
-    $\psi_b = 2,0$\\ 
-    $\psi_c = 1,0$\\ 
-    $\psi_d = 4,3$\\
-    $\psi_e = 4,5$\\
-    $\psi_f = 5,3$\\
-    $\psi_g = 2,5$\\
-    $\psi_h = 1,4$\\
-    $\psi_i = 3,0$\\
-\hline
-\end{tabular}
-{\fontsize{11pt}{\baselineskip}\selectfont
-}
-\end{table}
-
-\begin{figure}[ht!]
-\caption{Diagrama do Grafo $G$}
-\label{fig:graphExample1}
-\centering
-\includegraphics[scale=0.75]{img/graphExample1.png}
-{\fontsize{11pt}{\baselineskip}\selectfont
-\\Fonte: \cite{graphOnline}.
-}
-\end{figure}
-
-Segundo \cite{Bondy1976}, os grafos possuem esse nome porque eles possuem uma representação gráfica, e são essas representações que facilitam o entendimento de suas propriedades. De fato, o grafo é uma ferramenta poderosa para simplificação e entendimento de problemas, possibilitando uma modelagem computacional e assim contribuindo com a resolução dos mesmos. Além disso, muitas outras técnicas se beneficiam quando aplicadas utilizando o conceito de grafos, tal como as Redes Neurais Artificiais.
-
 \subsection{Redes neurais artificiais}
-O ser humano possui capacidades cognitivas extraordinárias e, desde o surgimento da computação, desejou-se projetar máquinas capazes de realizar tarefas inteligentes que, até então, somente eram  executadas por humanos. Os primeiros trabalhos desenvolvidos nessa área foram: um neurônio apresentado por \cite{mcculloch1943logical}, usado posteriormente como base para a concepção do  \textit{Perceptron} por \cite{rosenblatt1958perceptron} e um neurônio chamado \textit{Adaline} por \cite{widrow1960adaptive}. Tais trabalhos deram origem ao conceito de RNA que, em outras palavras, é uma tentativa de copiar a estrutura e o funcionamento do cérebro, composto este por bilhões de neurônios, para uma estrutura artificial, transformando assim as redes neurais biológicas em redes neurais artificiais \citep{Rauber2005}.
+O ser humano possui capacidades cognitivas extraordinárias e, desde o surgimento da computação, desejou-se projetar máquinas capazes de realizar tarefas inteligentes que, até então, somente eram  executadas por humanos. Os primeiros trabalhos desenvolvidos nessa área foram: um neurônio apresentado por \cite{mcculloch1943logical}, usado posteriormente como base para a concepção do  \textit{Perceptron} por \cite{rosenblatt1958perceptron} e um neurônio chamado \textit{Adaline} por \cite{widrow1960adaptive}. Tais trabalhos deram origem ao conceito da RNA que, em outras palavras, é uma tentativa de copiar a estrutura e o funcionamento do cérebro, composto este por bilhões de neurônios, para uma estrutura artificial, transformando assim as redes neurais biológicas em redes neurais artificiais \citep{Rauber2005}. Uma RNA é normalmente implementada através de um programa de computador (\textit{software}) ou através de componentes eletrônicos (\textit{hardware}).
 
-Para compreender o conceito por trás de uma rede neural, é preciso introduzir um modelo simplificado de um neurônio e suas capacidades de processamento associadas. Cada neurônio é considerado como uma unidade básica de processamento que, quando estimulada por sinais de entrada, emitem sinais de saída como uma reação. Tais sinais emitidos por um neurônio, são repassados para outros neurônios através de uma conexão sináptica. Tal processo pode ser repetido por várias camadas de neurônios até chegar ao nosso cérebro, que então processa essa informação e produz novas reações \citep{baeza1999modern}. A principal função de uma rede neural é armazenar conhecimento experimental e torná-lo disponível, o que em prática significa que este conhecimento é adquirido e armazenado em pesos sinápticos durante o processo. Uma RNA é normalmente implementada através de um programa de computador (\textit{software}) ou através de componentes eletrônicos (\textit{hardware}).
+Para compreender o conceito por trás de uma rede neural, é preciso introduzir um modelo simplificado de um neurônio e suas capacidades de processamento associadas. Cada neurônio é considerado como uma unidade básica de processamento que, quando estimulada por sinais de entrada, emitem sinais de saída como uma reação. Tais sinais emitidos por um neurônio, são repassados para outros neurônios através de uma conexão sináptica. Tal processo pode ser repetido por várias camadas de neurônios até chegar ao nosso cérebro, que então processa essa informação e produz novas reações \citep{baeza1999modern}. A principal função de uma rede neural é armazenar conhecimento experimental e torná-lo disponível, o que em prática significa que este conhecimento é adquirido e armazenado em pesos sinápticos durante o processo.
+
+Antes de definir e explora-se mais sobre as redes neurais, uma breve introdução a grafos é sugerida ao leitor (Apêndice \ref{app:grafos}). 
 
 \begin{figure}[ht!]
 \caption{Diagrama de um neurônio artificial}
@@ -75,13 +39,32 @@ Para compreender o conceito por trás de uma rede neural, é preciso introduzir 
 }
 \end{figure}
 
- Uma rede neural pode ser representada matematicamente através de uma estrutura de grafo (Figura \ref{fig:graphNeuron}), em que os vértices fazem o papel dos neurônios e as arestas representam as conexões sinápticas entre os neurônios, no qual se adicionarmos pesos a tais arestas, é possível mensurar a força de tal conexão sináptica. Seja $x_i$ entradas fornecidas por outros neurônios para um neurônio artificial. O processamento desse neurônio consiste em uma combinação linear das $D$ entradas tais que $\sum_{i=1}^{D} = w_i x_i$, onde $x_i$ é uma aresta com peso $w_i$. Se tal valor ultrapassar um limiar $\mu$, esse neurônio dispara um valor positivo (1) na saída binária $y$, caso contrário dispara um valor negativo (0) na saída. 
+ Uma rede neural pode ser representada matematicamente através de uma estrutura de grafo, em que os vértices fazem o papel dos neurônios e as arestas representam as conexões sinápticas entre os neurônios, no qual se adicionado pesos a tais arestas, é possível mensurar a força de tal conexão sináptica. Seja $x_i$ entradas fornecidas por outros neurônios para um neurônio artificial. O processamento desse neurônio consiste em uma combinação linear das $D$ entradas, tais que $\sum_{i=1}^{D} = w_i x_i$, onde $x_i$ é uma aresta com peso $w_i$. A computação desse valor, resulta em \textit{net} (como ilustrado na Figura \ref{fig:graphNeuron}). Se o valor de \textit{net} ultrapassar um limiar $\mu$ pré-definido, uma função de ativação será executada. Neste exemplo, a função de ativação escolhida foi a Heaviside ou degrau unitário, como é comumente chamada na matemática. Por ser uma função binária, dispara $y = 1$ ou $y = 0$ na saída, de acordo com $\mu$. Além dessa função binária, existem outras alternativas, nos quais devem ser avaliadas de acordo com suas características, tais como o uso da função linear, função tangente hiperbólica, função arco tangente, função sigmóide, dentre outras.
  
- Por ser uma ferramenta poderosa e possuir uma grande capacidade de processamento, possibilita diversas aplicações para diversas áreas do aprendizado de máquina, como classificação, clusterização, predição e regressão de dados.
+ Geralmente o uso de somente um único neurônio não é suficiente para o efetuação de tarefas de classificação mais complexas, necessitando assim, do uso conjunto de outros neurônios, nos quais operem em paralelo a este, aumentando assim a capacidade de processamento da rede neural. A partir disso, surge o conceito de organização dos neurônios em camadas \citep{duda1973pattern, bishop2006pattern, martin2018speech}. 
+ 
+ Uma categorização fundamental da topologia dos neurônios pode ser feita em relação ao método escolhido para a propagação da informação recebida, ou em outras palavras, quem receberá a informação processada pelo último neurônio. Pode-se distinguir então, de duas formas, entre redes de propagação para frente (do inglês: \textit{Feed-Forward Network}) e redes realimentadas (do inglês: \textit{Recurrent Neural Networks}), ver Figura \ref{fig:graphNeuron2}.
+ 
+ \begin{figure}[ht!]
+\caption{Diagramas que representam redes \textit{Feed-Forward Network} e \textit{Recurrent Neural Networks}}
+\label{fig:graphNeuron2}
+\centering
+\includegraphics[scale=0.5]{img/graphNeuron2.png}
+{\fontsize{11pt}{\baselineskip}\selectfont
+\\Fonte: \cite{Rauber2005}
+}
+\end{figure}
+ 
+ Uma \textit{Feed-Forward Network} é uma rede multicamadas unidirecional, no qual não existe um ciclo entre as camadas de neurônios, ou seja, após o processamento de uma camada, as informações são sempre repassadas adiantes, para as sucessoras camadas, até a camada de saída, nunca sendo possível o retorno para camadas já executadas. Camadas estas que, quando não ligadas diretamente às entradas e nem às saídas da rede, chamam-se camadas escondidas. 
+ 
+ Em controvérsia, uma \textit{Recurrent Neural Networks} é uma rede que possui arestas entre os neurônios sem restrições, onde o comportamento dinâmico desempenha um papel fundamental nesse modelo. Em alguns casos, os valores de ativação da rede passam por um processo de relaxação, por múltiplos e até repetidos neurônios, até chegarem a um estado estável.
+ 
+ Uma propriedade relevante das redes neurais é sua habilidade de aprender a partir do ambiente a qual foi inserida, também chamado de ambiente de aprendizado, em que sua capacidade de aprender é sucessivamente melhorada através do processo de adaptação dos parâmetros livres (pesos sinápticos e limiares) de sua rede. Este aprendizado pode ser adquirido de várias formas \citep{bishop2006pattern, duda1973pattern, Rauber2005}. Duas formas de aprendizado comuns são: aprendizagem supervisionada, em que o conhecimento é transmitido por meio de exemplos de entrada e saída; e aprendizagem não-supervisionada, no qual a rede só dispõem dos valores de entrada e deve descobrir as correlações entres os exemplos de treino.
+ 
+ Por ser uma ferramenta poderosa, flexível e possuir uma grande capacidade de processamento, vem apresentando resultados excepcionais nas mais diversas aplicações da literatura \citep{gupta2018text, martin2018speech, bishop2006pattern, duda1973pattern, Rauber2005}, justificando assim a sua escolha como classificador de dados para este trabalho.
 
 \subsection{K-vizinhos mais próximos}
-O algoritmo K-vizinhos mais próximos (do inglês: \textit{K-neareast neighbours} - KNN) tem como objetivo determinar o rótulo de classificação de uma amostra, baseando-se em outras amostras vizinhas, advindas de um conjunto de treinamento. O classificador KNN, um dois mais simples algoritmos de classificação, é baseado em
-instâncias. Esse algoritmo encontra os $k$ objetos mais similares e realiza uma votação de acordo com as classes às quais pertencem esses $k$ objetos, assinalando por fim, uma classe ao objeto de teste. A literatura apresenta diversas formas para expressar essa distância/similaridade dentre os objetos de análise \citep{fukunaga1975knn, duda1973pattern}. Por exemplo, se os dados trabalhados estão em formato de texto, é comum utilizar a similaridade por cossenos. Por outro lado, se os dados possuírem formato numérico, possivelmente a distância euclidiana será mais eficaz.
+O algoritmo K-vizinhos mais próximos (do inglês: \textit{K-neareast neighbours} - KNN) tem como objetivo determinar o rótulo de classificação de uma amostra, baseando-se em outras amostras vizinhas, advindas de um conjunto de treinamento. O classificador KNN, um dois mais simples e, ao mesmo tempo, um dos mais eficazes, dentre os algoritmos de classificação, é baseado em instâncias. Esse algoritmo encontra os $k$ objetos mais similares ao termo de consulta e realiza uma votação de acordo com as classes às quais pertencem esses $k$ objetos, assinalando por fim, uma classe ao objeto de teste. A literatura apresenta diversas formas para expressar essa distância/similaridade dentre os objetos de análise \citep{fukunaga1975knn, duda1973pattern}. Por exemplo, se os dados trabalhados estão em formato de texto, é comum utilizar a similaridade por cossenos. Por outro lado, se os dados possuírem formato numérico, possivelmente a distância euclidiana será mais eficaz.
 
 \begin{figure}[ht!]
 \caption{Ilustração do algoritmo K-vizinhos mais próximos aplicado em um plano cartesiano}
@@ -109,11 +92,13 @@ O PLN consiste no emprego de um conjunto de técnicas computacionais para aprend
 \subsection{Classificação de texto}
 Segundo \cite{aggarwal2014data} um dos principais desafios encontrados durante o processo de classificação de texto é sobre o tamanho dos dados tratados, que podem variar de algumas poucas dezenas para milhões de palavras. Esses dados se encontram, quase sempre, de maneira esparsa, ou seja, possuindo baixa frequência de uso. Por outro lado, têm-se muitas vezes uma alta frequência de dados não úteis para tratamento, como as \textit{Stopwords}.
 
-É comum também, dependendo do contexto ou de como obteve-se o texto, que exista palavras com o mesmo significado, erros ortográficos ou até mesmo erros de codificação. Logo, muitas vezes é necessário uma etapa de normalização do texto. Normalizar um texto significa, segundo \citep{martin2009speech}, converte-lo dê forma conveniente à um formato padrão, que facilite as manipulações sobre os dados. Exemplos de sub-etapas da normalização são: \textit{tokenization} e \textit{lemmatization}. 
+É comum também, dependendo do contexto ou de como obteve-se o texto, que exista palavras com o mesmo significado, erros ortográficos ou até mesmo erros de codificação. Logo, muitas vezes é necessário uma etapa de normalização do texto. Normalizar um texto significa, segundo \citep{martin2018speech}, converte-lo dê forma conveniente à um formato padrão, que facilite as manipulações sobre os dados. Exemplos de sub-etapas da normalização são: \textit{tokenization} e \textit{lemmatization}. 
 
 Na \textit{tokenization}, deseja-se separar as palavras contidas em um texto, de maneira que elas fiquem isoladas. Por exemplo, na frase "fui ao Rio de Janeiro", resultaria em 5 \textit{tokens} distintos: "fui", "ao", "Rio", "de", "Janeiro". Contudo, uma separação em \textit{tokens} por somente o uso do espaçamento em branco, nem sempre representa o contexto da frase, pois como no exemplo "fui ao Rio de Janeiro", Rio de Janeiro não deve ser tratado como três \textit{tokens} distintos, e sim como um único \textit{token}, que no caso representa a cidade ou estado brasileiro. Em algumas linguagens naturais, nem todas palavras possuem espaço entre si, como é o caso do mandarin da China, por exemplo, dificultando ainda mais o processo de \textit{tokenization}. 
 
-A etapa de \textit{lemmatization}, é o processo, efetivamente, de deflexionar uma palavra para determinar o seu lema. Por exemplo, as palavras gato, gata, gatos, gatas são todas formas do mesmo lema: gato. Igualmente, as palavras estudou, estudava, estudaria, estudará, são do mesmo lema: estudar. A lematização é útil quando deseja-se ver os usos de palavras em contextos sem importância das flexões, como também para a criação e uso de índices ou na investigação linguística.
+A etapa de \textit{lemmatization}, é o processo, efetivamente, de deflexionar uma palavra para determinar o seu lema. Por exemplo, as palavras gato, gata, gatos, gatas são todas formas do mesmo lema: gato. Igualmente, as palavras estudou, estudava, estudaria, estudará, são do mesmo lema: estudar. A lematização é útil quando deseja-se ver os usos de palavras em contextos sem importância das flexões, como também para a criação e uso de índices ou na investigação linguística. Por poder se tornar um processo custoso, dependendo da quantidade de dados, uma alternativa mais barata acaba sendo mais viável nesses cenários. Surgindo então o conceito de uma análise morfológica, chamada \textit{stemming}.
+
+No \textit{stemming}, deseja-se reduzir as palavras flexionadas, ou às vezes derivadas, ao seu tronco, base ou raiz, cortando assim caracteres dos seus sufixos. Por exemplo, a stemização das palavras estudou, estudava, estudaria, estudará, será "estud", visto que é o prefixo comum e redutível por todos. Um dos algoritmos mais conhecidos para \textit{stemming} é o Porter, proposto por \citep{porter1980algorithm}. Se por um lado, facilita a identificação de variantes para um mesmo lema e possui o potencial de lidar com palavras desconhecidas, transformando-as em uma semelhante conhecida, pelo outro lado, a utilização deste método pode gerar erros de interpretação, tanto quando ele corta demais as palavras, como também quando ele não corta o suficiente, permanecendo a ambiguidade.
 
 Além de uma etapa de normalização dos dados, uma etapa para extração e seleção de características é essencial, e pode gerar benefícios como: redução da dimensão do problema, que por sua vez aumenta a velocidade de execução do algoritmo; redução na quantidade total de características; aumento na precisão de predição e acerto; e facilitar a visualização dos dados.
 

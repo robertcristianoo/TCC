@@ -1,0 +1,39 @@
+% Para cada apêndice, um \chapter
+\chapter{Grafos}
+\label{app:grafos}
+Muitas situações no mundo real podem ser descritas com o uso de um diagrama, composto por um conjunto de pontos e arestas, onde as arestas unem pares desses pontos. Por exemplo, os pontos podem representar cidades em um mapa, e as arestas representariam as estradas que ligam duas cidades. O conceito de grafo parte de uma abstração matemática para caracterizar situações com essas características \citep{Bondy1976}.
+
+Matematicamente um grafo $G$ é uma tripla ($V$, $E$, $\psi$), consistido por um conjunto não vazio de vértices $V$, um conjunto de arestas $E$ e uma função de incidência $\psi$ que caracteriza quais vértices possuem uma relação (através de uma aresta) com outros vértices. Por exemplo, seja $G = (V, E, \psi)$ um grafo (Figura \ref{fig:graphExample1}), tal que $V = \{0, 1, 2, 3, 4, 5\}$, $E = \{a, b, c, d, e, f, g, i\}$ e $\psi$ a função incidência representada na Tabela \ref{tab:graphExample1}.
+
+\begin{table}[ht!]
+\caption{Função incidência $\psi$ de $G$}
+\label{tab:graphExample1}
+\centering
+\begin{tabular}{| c | c |}
+\hline
+    $\psi_a = 1,2$\\ 
+    $\psi_b = 2,0$\\ 
+    $\psi_c = 1,0$\\ 
+    $\psi_d = 4,3$\\
+    $\psi_e = 4,5$\\
+    $\psi_f = 5,3$\\
+    $\psi_g = 2,5$\\
+    $\psi_h = 1,4$\\
+    $\psi_i = 3,0$\\
+\hline
+\end{tabular}
+{\fontsize{11pt}{\baselineskip}\selectfont
+}
+\end{table}
+
+\begin{figure}[ht!]
+\caption{Diagrama do Grafo $G$}
+\label{fig:graphExample1}
+\centering
+\includegraphics[scale=0.75]{img/graphExample1.png}
+{\fontsize{11pt}{\baselineskip}\selectfont
+\\Fonte: \cite{graphOnline}.
+}
+\end{figure}
+
+Segundo \cite{Bondy1976}, os grafos possuem esse nome porque eles possuem uma representação gráfica, e são essas representações que facilitam o entendimento de suas propriedades. De fato, o grafo é uma ferramenta poderosa para simplificação e entendimento de problemas, possibilitando uma modelagem computacional e assim contribuindo com a resolução dos mesmos. Além disso, muitas outras técnicas se beneficiam quando aplicadas utilizando o conceito de grafos, tal como as Redes Neurais Artificiais.
