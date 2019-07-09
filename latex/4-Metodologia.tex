@@ -1,7 +1,34 @@
 \chapter{Metodologia}
+O primeiro passo para a condução deste trabalho foi a verificação da existência de sistemas para identificação de chamadas falsas dentre a literatura acadêmica. Com esse objetivo, diversas consultas em repositórios de artigos e publicações foram feitas, tais como \textit{Google Scholar}, Portal de periódicos da CAPES, \textit{ACM Digital Library} e \textit{dblp computer science bibliography}. Utilizando como índices, palavras chaves como: \textit{emergency calls, prank calls, hoax calls, emergency service, 911 calls, 911 emergency calls, automatic prank call rejection}. Contudo, os resultados não foram satisfatórios. Ao menos inicialmente, acredita-se que não exista algum sistema de detecção de chamados falsos baseado no conteúdo da chamada, que esteja disponível. Logo, como sua viabilidade ainda é uma incógnita, este trabalho têm como objetivo avaliar a viabilidade de elaboração de sistemas que identifiquem corretamente quando uma chamada emergencial é falsa, com base no conteúdo da ligação, e por meio de classificadores.
+
+Para alcançar esse objetivo, é necessário a execução de passos sequenciais, incrementalmente, ordenados a seguir: 
+\begin{enumerate}
+    \item Obter, analisar e compreender a base de dados. Como também, levantar hipóteses iniciais e definir um truncamento do período em que será analisado.
+    \item Identificar, selecionar e extrair características, para facilitar a classificação. Como também a criação do \textit{target} que deseja-se prever.
+    \item Treinar os algoritmos de classificação de texto, como RNA e KNN, definindo seus parâmetros empiricamente.
+    \item Executar os algoritmos categorizadores e avaliar a predição fornecida por cada classificador.
+    \item Escrever, concluir e apresentar os resultados obtidos.
+\end{enumerate}
+
+Ao fim, com os resultados obtidos, será possível mensurar preliminarmente se é viável tal sistema. Apresentando as estatísticas obtidas, as características identificadas, a performance individual de cada classificador utilizado e a análise crítica dos resultados. É importante ressaltar também, que caso o estudo não conclua positivamente, não significa que não exista viabilidade de tal sistema e sim que seja inviável nas circunstâncias em que foram testadas, com as especifidades dos dados, o idioma, características e métodos.
+
+\section{Ferramentas de apoio}
+Existem diversas ferramentas de apoio disponíveis que serão utilizadas de maneira intermediária para análise da viabilidade desse sistema. 
+
+A principal delas é a linguagem de programação Python, criada por \cite{python}, que por ser uma linguagem estável, flexível e possuir um grande leque de ferramentas gratuitas disponíveis, vem se destacando em projetos de inteligência artificial e aprendizado de máquina. Dentre tais ferramentas, algumas serão aplicadas neste projeto, como \textit{scikit-learn} \citep{scikitlearn}, \textit{pandas} \citep{pandas}, \textit{NumPy} \citep{van2011numpy}, \textit{Natural Language Toolkit} (NLTK) \citep{nltk} e \textit{matplotlib} \citep{matplotlib}.
+
+A biblioteca \textit{scikit-learn} dispõem de diversas funcionalidades que irão facilitar a implementação dos algoritmos de classificação e execução dos testes. Por exemplo, ela fornece a implementação da RN supervisionada com topologia FNN. Com os métodos disponíveis, caberá ao trabalho uma análise aprofundada dos parâmetros, como também apresentar uma validação cruzada, que significa avaliar a capacidade de generalização do modelo proposto, a partir de um conjunto de dados, e a análise dos resultados.
+
+A biblioteca \textit{pandas} fornece ferramentas de análise de dados, estruturas de dados de alta performance e também leitura de arquivos, inclusive no formato \textit{Comma Separated Values - CSV} em que se encontra a base de dados planejada.
+
+\textit{NumPy} é um pacote para a linguagem Python que suporta \textit{arrays} e matrizes multidimensionais, possuindo uma larga coleção de funções matemáticas para trabalhar com estas estruturas. Facilitando assim, as manipulações algébricas e cálculos científicos que venha a ser necessários.
+
+A biblioteca NLTK é um recurso que dispõem diversos métodos para facilitar a manipulação da linguagem natural, como \textit{tokenization, stemming, tagging, parsing, semantic reasonning} e \textit{wrappers}. Vindo a ser muito útil durante a etapa de normalização dos dados.
+
+Por fim, a biblioteca \textit{matplotlib} que é uma biblioteca de plotagem e montagem de gráficos para o Python e sua extensão matemática numérica \textit{NumPy}. Ele fornece uma API orientada a objetos para incorporar gráficos em aplicativos usando \textit{kits} de ferramentas \textit{Graphical User Interface - GUI} para uso geral.
 
 \section{Base de dados}
-A base de dados a ser trabalhada neste projeto é a \textit{Call Data}, do centro de comunicações do departamento de polícia de Seattle (\textit{Seattle Police Department Communications Center} - SPD), dos Estados Unidos da América. Esta base de dados representa os relatórios das chamadas emergenciais originados pela comunidade local, onde é armazenado cerca de $95\%$ de todos os chamados recebidos pelo departamento. No total, estão disponíveis 11 colunas de informações que descrevem a ocorrência (Tabela \ref{tab:callDataColumns}). Existindo mais de 3,9 milhões ocorrências únicas registradas desde 6 de fevereiro de 2009. Novos dados são inseridos diariamente pela equipe administradora, o que é um ponto positivo, pois é possível estimar o número de chamadas falsas recebidas em relação ao número total de chamados nos últimos anos, como também validar os objetivos ressaltados neste trabalho no cenário atual.
+Devido a dificuldade de encontrar uma base especifica para o problema, uma base que será adaptada é \textit{Call Data}, do centro de comunicações do departamento de polícia de Seattle (\textit{Seattle Police Department Communications Center} - SPD), dos Estados Unidos da América. Esta base de dados representa os relatórios das chamadas emergenciais originados pela comunidade local, na qual é armazenado cerca de $95\%$ de todos os chamados recebidos pelo departamento. No total, estão disponíveis 11 colunas de informações que descrevem a ocorrência (Tabela \ref{tab:callDataColumns}). Existindo mais de 3,9 milhões ocorrências únicas registradas desde 6 de fevereiro de 2009. Novos dados são inseridos diariamente pela equipe administradora, o que é um ponto positivo, pois é possível estimar o número de chamadas falsas recebidas em relação ao número total de chamados nos últimos anos, como também validar os objetivos ressaltados neste trabalho no cenário atual.
 
 \begin{table}[ht!]
 \caption{Tabela de atributos que descrevem uma ocorrência da base de dados \textit{Call Data}.}
@@ -29,4 +56,28 @@ Quadra                                & Quadra do setor da ocorrência          
 Por se tratar de uma base de dados pública e disponível na internet, as informações disponíveis são restritas em relação aos dados originais que são coletados diariamente pelo departamento, pois devido a sua natureza, são informações sigilosas e privadas da comunidade local. Dados como: nome, idade, sexo ou logradouro da ocorrência, foram removidos pelos administradores com o objetivo de preservar a privacidade dos envolvidos. 
 
 Outra característica dessa base de dados é que ela está disponível no idioma inglês e com informações e relatórios dos chamados já bem resumidos, o que não possibilita tanta exploração e uso de técnicas de processamento de linguagem natural. Contudo, como toda base de dados, um pré-processamento é necessário, com objetivo de eliminar ou corrigir erros de ortografia, ambiguidades e informações irrelevantes.
+
 \section{Cronograma de atividades}
+O cronograma de atividades planejadas para execução deste projeto foi definido para os próximos cinco meses, começando a partir de agosto até dezembro de 2019. As atividades foram definidas e separadas por etapas (Tabela \ref{tab:atividades}), sendo elas:
+    
+\begin{enumerate}
+    \item Análises sobre a base de dados.
+    \item Implementação dos algoritmos e testes.
+    \item Validação de resultados e discussão.
+    \item Escrita, conclusão e apresentação dos resultados obtidos.
+\end{enumerate}
+
+\begin{table}[ht!]
+\caption{Cronograma de atividades planejadas para a segunda etapa deste projeto.}
+\label{tab:atividades}
+\centering
+%\resizebox{\textwidth}{!}{%
+\begin{tabular}{cclllc}
+\hline
+\multicolumn{1}{l}{Mês/Etapa} & \multicolumn{1}{l}{{\color[HTML]{333333} Agosto}} & Setembro & Outubro & Novembro & \multicolumn{1}{l}{Dezembro} \\ \hline
+\multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{\cellcolor[HTML]{BCFFBC}} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &  \\ \hline
+\multicolumn{1}{c|}{2} & \multicolumn{3}{c|}{\cellcolor[HTML]{FFFC9E}} & \multicolumn{1}{c}{} &  \\ \hline
+3 & \multicolumn{1}{c|}{{\color[HTML]{333333} }} & \multicolumn{3}{c|}{\cellcolor[HTML]{FFCE93}} &  \\ \hline
+4 & \multicolumn{1}{l}{} &  &  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFADA9}} \\ \hline
+\end{tabular}%
+\end{table}
