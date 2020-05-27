@@ -28,7 +28,7 @@ A biblioteca NLTK é um recurso que dispõem diversos métodos para facilitar a 
 Por fim, a biblioteca \textit{matplotlib} que é uma biblioteca de plotagem e montagem de gráficos para o Python e sua extensão matemática numérica \textit{NumPy}. Ele fornece uma API orientada a objetos para incorporar gráficos em aplicativos usando \textit{kits} de ferramentas \textit{Graphical User Interface - GUI} para uso geral.
 
 \section{Base de dados}
-Devido a dificuldade de encontrar uma base especifica para o problema, uma base que será adaptada é \textit{Call Data}, do centro de comunicações do departamento de polícia de Seattle (\textit{Seattle Police Department Communications Center} - SPD), dos Estados Unidos da América. Esta base de dados representa os relatórios das chamadas emergenciais originados pela comunidade local, na qual é armazenado cerca de $95\%$ de todos os chamados recebidos pelo departamento. No total, estão disponíveis 11 colunas de informações que descrevem a ocorrência (Tabela \ref{tab:callDataColumns}). Existindo mais de 3,9 milhões ocorrências únicas registradas desde 6 de fevereiro de 2009. Novos dados são inseridos diariamente pela equipe administradora, o que é um ponto positivo, pois é possível estimar o número de chamadas falsas recebidas em relação ao número total de chamados nos últimos anos, como também validar os objetivos ressaltados neste trabalho no cenário atual.
+Devido a dificuldade de encontrar uma base específica para o problema, uma base que será adaptada é \textit{Call Data}, do centro de comunicações do departamento de polícia de Seattle (\textit{Seattle Police Department Communications Center} - SPD), dos Estados Unidos da América. Esta base de dados representa os relatórios das chamadas emergenciais originados pela comunidade local, na qual é armazenado cerca de $95\%$ de todos os chamados recebidos pelo departamento. No total, estão disponíveis 11 colunas de informações que descrevem a ocorrência (Tabela \ref{tab:callDataColumns}). Existindo mais de 3,9 milhões ocorrências únicas registradas desde 6 de fevereiro de 2009. Novos dados são inseridos diariamente pela equipe administradora, o que é um ponto positivo, pois é possível estimar o número de chamadas falsas recebidas em relação ao número total de chamados nos últimos anos, como também validar os objetivos ressaltados neste trabalho no cenário atual.
 
 \begin{table}[ht!]
 \caption{Tabela de atributos que descrevem uma ocorrência da base de dados \textit{Call Data}.}
@@ -58,10 +58,11 @@ Por se tratar de uma base de dados pública e disponível na internet, as inform
 Outra característica dessa base de dados é que ela está disponível no idioma inglês e com informações e relatórios dos chamados já bem resumidos, o que não possibilita tanta exploração e uso de técnicas de processamento de linguagem natural. Contudo, como toda base de dados, um pré-processamento é necessário, com objetivo de eliminar ou corrigir erros de ortografia, ambiguidades e informações irrelevantes.
 
 \section{Cronograma de atividades}
-O cronograma de atividades planejadas para execução deste projeto foi definido para os próximos cinco meses, começando a partir de agosto até dezembro de 2019. As atividades foram definidas e separadas por etapas (Tabela \ref{tab:atividades}), sendo elas:
+O cronograma de atividades planejadas para execução deste projeto foi definido para os próximos cinco meses, começando a partir de agosto até dezembro de 2019. As atividades foram organizadas e separadas por etapas (Tabela \ref{tab:atividades}), sendo elas:
     
 \begin{enumerate}
     \item Análises sobre a base de dados.
+    \item Seleção e extração de características relevantes e criação do \textit{target}.
     \item Implementação dos algoritmos e testes.
     \item Validação de resultados e discussão.
     \item Escrita, conclusão e apresentação dos resultados obtidos.
@@ -72,12 +73,13 @@ O cronograma de atividades planejadas para execução deste projeto foi definido
 \label{tab:atividades}
 \centering
 %\resizebox{\textwidth}{!}{%
-\begin{tabular}{cclllc}
+\begin{tabular}{|c|l|l|c|l|l|}
 \hline
-\multicolumn{1}{l}{Mês/Etapa} & \multicolumn{1}{l}{{\color[HTML]{333333} Agosto}} & Setembro & Outubro & Novembro & \multicolumn{1}{l}{Dezembro} \\ \hline
-\multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{\cellcolor[HTML]{BCFFBC}} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} &  \\ \hline
-\multicolumn{1}{c|}{2} & \multicolumn{3}{c|}{\cellcolor[HTML]{FFFC9E}} & \multicolumn{1}{c}{} &  \\ \hline
-3 & \multicolumn{1}{c|}{{\color[HTML]{333333} }} & \multicolumn{3}{c|}{\cellcolor[HTML]{FFCE93}} &  \\ \hline
-4 & \multicolumn{1}{l}{} &  &  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFADA9}} \\ \hline
+\multicolumn{1}{|l|}{Mês/Etapa} & {\color[HTML]{333333} Agosto} & Setembro & \multicolumn{1}{l|}{Outubro} & Novembro & Dezembro \\ \hline
+1 & \multicolumn{1}{c|}{\cellcolor[HTML]{B1FFFC}} & \multicolumn{4}{c|}{} \\ \hline
+2 & \multicolumn{2}{c|}{\cellcolor[HTML]{BCFFBC}} & \multicolumn{3}{c|}{} \\ \hline
+3 &  & \multicolumn{3}{l|}{\cellcolor[HTML]{FFFC9E}} &  \\ \hline
+4 & \multicolumn{2}{c|}{{\color[HTML]{333333} }} & \multicolumn{3}{c|}{\cellcolor[HTML]{FFCE93}} \\ \hline
+5 & \multicolumn{4}{l|}{} & \cellcolor[HTML]{FFADA9} \\ \hline
 \end{tabular}%
 \end{table}

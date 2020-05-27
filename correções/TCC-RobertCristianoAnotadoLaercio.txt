@@ -1,0 +1,57 @@
+Robert
+********************
+Introdução
+-ampliar e aumentar são sinônimos.... 1º P
+- P2, 3 e 4 sem citações... Foram feitas afirmações importantes no texto mas sem nenhuma fonte citada...
+-P5 está solto no texto... não tem link com os demais...
+-Quando se trabalha com metodologias para a indústria, como por exemplo, na
+identificação e classificação de falhas em equipamentos, há um grande números de
+dados abertos de funcionamento real (PHMsociety, 2009; NASA, 2007; Dua & Graff,
+2017), que favorece a proposição de soluções para as mais variadas demandas da área.
+Entretanto, existem poucas bases de dados públicas disponíveis para realizações de
+experimentos e prova de metodologias, que seriam capazes de solucionar o problema de
+identificação de chamadas falsas. E ainda dentre tais bases, a maioria está disponível
+no idioma inglês, e os dados que são disponibilizados são rasos, carecendo de detalhes
+e proporcionando pouco espaço para uma exploração aprofundada.
+
+Achei essa parte estranha... logo após ela tem um parágrafo que tenta delinar o estudo mas não é claro.
+
+
+Objetivos  
+"com o retorno de uma ferramenta de apoio a decisão aos operadores." Isso aqui eu não entendi...
+
+"Motivar, com resultados positivos, as autoridades responsáveis, para aumentar o
+investimento no desenvolvimento de ferramentas"
+ Estranhoooo......
+
+
+Conceitos Básicos
+Acho que antes de falar das técnicas computacionais, seria interessante falar de técnicas atuais...
+Como os gestores desses serviços lidam com esse problema atualmente?
+Essa frase mostra que existem algumas bases elas foram testadas em algum estudo?
+"existem poucas bases de dados públicas disponíveis para realizações de
+experimentos e prova de metodologias"  
+
+Por que só RNA e KNN?
+Na Revisão de Literatura você fala sobre SVM e Arvore de Decisão, por exemplo, seria interessante isso está escrito aqui..
+
+REVISÃO DE LITERATURA
+Item 3.1 ... se não falam dos métodos atacando seu problema, nem deviam está aqui...
+3.2- O texto que foi utilizado aqui ficaria melhor se fosse utilizado como contextualização e/ou justificativa na introdução.
+
+
+Metodologia
+-O tópico 1 já inviabiliza seu trabalho. Como obter a base de dados? Isso é possível?
+-A base de Dados Call Data é disponibilizada?
+-Que tipo de adaptação será necessário?
+-Como será realizada essa avlaiação dos resultados?
+-"... Apresentando as estatísticas obtidas..." Quais estatísticas?
+
+-"... É importante ressaltar também, que caso o estudo não conclua positivamente,
+não significa que não exista viabilidade de tal sistema e sim que seja inviável
+nas circunstâncias em que foram testadas ..." Mas se seu objetivo é testar a viabilidade como poderia concluir isso?
+Essa base de dados que está descrita é realmente textual?
+
+CRONOGRAMA
+-Não entendi a etapa: Seleção e extração de características relevantes e criação do target.
+-Somente o Mês de Dezembro será suficiente para escrever o TCC?
