@@ -1,7 +1,7 @@
 % documento de exemplo modificado a partir do modelo original para teses e dissertações do 
 % Programa de Pós-Graduaçãoe em Ciência da Comptuação da UFMG - PPGCC-UFMG, onde as teses 
 % foram substituídas por TCCs
-\documentclass[tcc]{ppgccufmg} % utilizem [tcc] para a monografia final ou [proposal] para projeto de TCC
+\documentclass[tcc, nomainmatter]{ppgccufmg} % utilizem [tcc] para a monografia final ou [proposal] para projeto de TCC
 
 \usepackage[brazil]{babel}      % se o documento for em português, OU
 %\usepackage[latin1]{inputenc}
@@ -19,8 +19,7 @@
   linkcolor=blue,
   filecolor=black,
   ]{hyperref}
-%\usepackage[round]{natbib}
-\usepackage[plain]{natbib}
+\usepackage[round]{natbib}
 %\usepackage[style=abnt]{biblatex}
 %\addbibresource{6-bibfile.bib}  
 \usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
@@ -53,6 +52,9 @@
   %ack={agradecimentos},
   epigraphtext={If it wasn't hard, everyone would do it. It's the hard that makes it great}{Tom Hanks},
 }
+
+\listofalgorithms
+\mainmatter
 
 % Inclua cada capítulo em um arquivo separado para melhorar a organização
 \input{1-Introducao}

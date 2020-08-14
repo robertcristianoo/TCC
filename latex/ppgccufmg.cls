@@ -64,7 +64,11 @@
 \def\ppgcc@showall{%
   \ppgcc@showcovertrue
   \ppgcc@showtitletrue
-  \ifppgcc@proposal\ppgcc@showfcfalse\else\ppgcc@showfctrue\fi
+  \ifppgcc@proposal
+    \ppgcc@showfcfalse
+  \else
+    \ppgcc@showfctrue
+  \fi
   \ppgcc@showapprovaltrue
   \ppgcc@showabstracttrue
   \ppgcc@showdedicationtrue
@@ -1050,7 +1054,6 @@
     \cleardoublepage
   \endgroup\fi
 }}
-
 
 %%%\def\ppgcc@addabstract#1#2{\addabstract{#1}{#2}}
 \newcommand\ppgcc@addabstract[3][]{\addabstract[#1]{#2}{#3}}

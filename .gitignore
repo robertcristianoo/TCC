@@ -105,12 +105,15 @@ venv.bak/
 
 # rar, zip, gz files
 !TEMPLATE_LaTeX_IFNMG.zip
-.zip
-.rar
-.gz
+*.zip
+*.rar
+*.gz
 
 # database csv
 *.csv
 
 # ref teorico
 ref teórico/
+
+# Artigos Relacionados
+Artigos Relacionados/
