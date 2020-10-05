@@ -5,3 +5,9 @@ The Allegheny County 911 center answers and dispatches 911 calls for 111 out of 
 Dataset available in:
 
 https://data.wprdc.org/dataset/allegheny-county-911-dispatches-ems-and-fire/resource/ff33ca18-2e0c-4cb5-bdcd-60a5dc3c0418?view_id=0016eb47-4952-44ed-997a-0ca77e0dde6c
+
+=============================================================================================
+This data represents police response activity. Each row is a record of a Call for Service (CfS) logged with the Seattle Police Department (SPD) Communications Center. Calls originated from the community and range from in progress or active emergencies to requests for problem solving. Additionally, officers will log calls from their observations of the field.
+
+Dataset available in:
+https://data.seattle.gov/Public-Safety/Call-Data/33kz-ixgy
