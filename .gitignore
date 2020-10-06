@@ -112,8 +112,17 @@ venv.bak/
 # database csv
 *.csv
 
+# correções
+correções/
+
 # ref teorico
 ref teórico/
 
 # Artigos Relacionados
 Artigos Relacionados/
+
+# database
+database/
+
+# .vscode
+.vscode/
